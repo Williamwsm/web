@@ -5,17 +5,15 @@ import com.rometools.rome.io.SyndFeedInput;
 import com.rometools.rome.io.XmlReader;
 
 import java.net.URL;
-
+@AllArgsConstructor
+@Getter
 public class Rome {
     private String urlFeed;
 
-    public Rome(String urlFeed) {
-        this.urlFeed = urlFeed;
-    }
 
     public void lerFeed() {
         try {
-            URL url = new URL(urlFeed);
+            URL url = new URL(getUrlFeed());
 
             SyndFeedInput entrada = new SyndFeedInput();
             SyndFeed feed = entrada.build(new XmlReader(url));
