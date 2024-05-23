@@ -5,6 +5,8 @@ import com.example.rss_g1.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+//testando pull request
+
 @Service
 public class UsuarioService {
     @Autowired
