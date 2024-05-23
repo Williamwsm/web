@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 //testando pull request
-
+//não precisa mesclar, só testando na minha branch agora
 @Service
 public class UsuarioService {
     @Autowired
