@@ -17,7 +17,7 @@ public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+    @Column(name = "nome_categoria")
     private String nome;
 
     // Relacionamento com Noticia
