@@ -15,6 +15,7 @@ import java.util.Objects;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_usuario")
     private Integer id;
 
     @Column(name = "nome_usuario",nullable = false, length = 100)
