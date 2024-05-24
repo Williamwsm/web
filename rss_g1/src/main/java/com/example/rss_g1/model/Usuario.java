@@ -17,11 +17,11 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 100)
+    @Column(name = "nome_usuario",nullable = false, length = 100)
     private String nome;
 
     @Column(length = 20)
-    private String tefone;
+    private String telefone;
 
     @Column(nullable = false, unique = true, length = 150)
     private String login;
@@ -34,7 +34,7 @@ public class Usuario {
     private Date dataNascimento;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name = "status_usuario", nullable = false)
     private StatusUsuario status;
     @ManyToMany
     @JoinTable(
@@ -66,7 +66,7 @@ public class Usuario {
         return "Usuario{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", tefone='" + tefone + '\'' +
+                ", tefone='" + telefone + '\'' +
                 ", login='" + login + '\'' +
                 ", email='" + email + '\'' +
                 ", dataNascimento=" + dataNascimento +
