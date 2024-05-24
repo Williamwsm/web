@@ -7,9 +7,7 @@ import com.rometools.rome.io.FeedException;
 import com.rometools.rome.io.SyndFeedInput;
 import com.rometools.rome.io.XmlReader;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -21,8 +19,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 @Service
-@EnableScheduling
-@Component
 public class RssConsumidorService {
     @Autowired
     private NoticiaRepository noticiaRepository;
@@ -51,7 +47,7 @@ public class RssConsumidorService {
                 Noticia noticia = new Noticia();
                 noticia.setTitulo(titulo);
                 noticia.setLink(link);
-                noticia.setDesc(descricao); // Você pode querer limpar a descrição
+                noticia.setDescricao(descricao); // Você pode querer limpar a descrição
                 noticia.setEndImg(endImg);
                 noticia.setDataPublicacao(dataPublicacao);
                 noticiaRepository.save(noticia);
