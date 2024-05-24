@@ -24,7 +24,7 @@ public class Noticia {
     private String endImg;
 
     @Column(nullable = false, length = 1000)
-    private String desc;
+    private String descricao;
 
     @Column(name = "data_publicacao", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
