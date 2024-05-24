@@ -15,6 +15,7 @@ import java.util.Objects;
 public class Noticia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_noticia")
     private Integer id;
 
     @Column(nullable = false, length = 250)
