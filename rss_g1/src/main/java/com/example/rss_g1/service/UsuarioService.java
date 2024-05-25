@@ -5,7 +5,10 @@ import com.example.rss_g1.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-//testando pull request
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 @Service
 public class UsuarioService {
@@ -23,5 +26,17 @@ public class UsuarioService {
         }
         return usuario;
     }
+
+    public void listar(){
+      for (Usuario u: usuarioRepository.findAll()){
+          System.out.println(u);
+      }
+    }
+    public static  Date conversaoData(String data) throws ParseException {
+        SimpleDateFormat formato = new SimpleDateFormat("ddMMyyyy");
+        Date dataFormatada = formato.parse(data);
+        return dataFormatada;
+    }
+
 }
 
