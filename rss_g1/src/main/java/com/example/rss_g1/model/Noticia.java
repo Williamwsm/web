@@ -18,7 +18,7 @@ public class Noticia {
     @Column(name = "id_noticia")
     private Integer id;
 
-    @Column(nullable = false, length = 250)
+    @Column( name = "titulo_noticia",nullable = false, length = 250)
     private String titulo;
 
     @Column(name = "endereco_img", length = 500)
