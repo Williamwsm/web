@@ -37,6 +37,10 @@ public class UsuarioService {
         Date dataFormatada = formato.parse(data);
         return dataFormatada;
     }
+        public Usuario buscarUsuario(String email){
+        return usuarioRepository.findByEmail(email);
+    }
+
 
 }
 
